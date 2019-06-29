@@ -1,9 +1,5 @@
 /* setting the height for our document, this will help us achieve our sticky footer effect */
 
-html {
-    width: 100%;
-}
-
 html, body {
     height: 100%;
 }
@@ -288,4 +284,25 @@ textarea:focus {
 @media screen and (max-width: 768px){};
 
 
-@media screen and (max-width: 640px){};
+@media screen and (max-width: 640px){
+    #headsize {
+        position: static;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #name {
+        width: 100%;
+    }
+    #nav {
+        clear: both;
+    }
+    #main {
+        width: 100%;
+    }
+    #container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+};
