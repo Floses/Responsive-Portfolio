@@ -19,7 +19,8 @@ html, body {
     padding: 5px;
     color: white;
     text-align: center;
-    width: 45%;
+    width: 100%;
+    max-width: 450px;
     background: #005799;
     float: left;
 }
@@ -278,10 +279,10 @@ textarea:focus {
     padding: 10px;
 }
 
-@media screen and (max-width: 980px){};
+@media screen and (max-width: 980px){}
 
 
-@media screen and (max-width: 768px){};
+@media screen and (max-width: 768px){}
 
 
 @media screen and (max-width: 640px){
@@ -291,10 +292,14 @@ textarea:focus {
         margin: 0;
         padding: 0;
     }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
     #name {
         width: 100%;
     }
-    #nav {
+    nav {
         clear: both;
     }
     #main {
@@ -302,7 +307,8 @@ textarea:focus {
     }
     #container {
         width: 100%;
-        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
         padding: 0;
     }
-};
+}
