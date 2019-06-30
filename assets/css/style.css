@@ -2,6 +2,8 @@
 
 html, body {
     height: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* defining our header attributes, note that we want the content to be a certain width */
@@ -310,5 +312,6 @@ textarea:focus {
         margin-left: auto;
         margin-right: auto;
         padding: 0;
+        box-sizing: border-box;
     }
 }
