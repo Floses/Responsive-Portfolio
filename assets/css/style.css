@@ -1,325 +1,392 @@
 /* setting the height for our document, this will help us achieve our sticky footer effect */
 
-html, body {
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
+html,
+body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 /* defining our header attributes, note that we want the content to be a certain width */
-
-#headSize {
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    background: white;
+.wrapper {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
 }
 
 /* decided to style the header text seperately to avoid confusion */
 
 #name {
-    padding: 5px;
-    color: white;
-    text-align: center;
-    width: 100%;
-    max-width: 450px;
-    background: #005799;
-    float: left;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  background: #005799;
+  float: left;
 }
 
 /* telling our nav to go to the right of the page */
 
 nav {
-    float: right;
+  float: right;
 }
 
 /* since we are using a list, we want to reset everthing so it's not bulleted */
 
 nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* here we are changing our list to display side-by-side and allowing us to position */
 
 nav li {
-    display: inline-block;
-    margin-left: 10px;
-    padding-top: 35px;
+  display: inline-block;
+  margin-left: 10px;
+  padding-top: 35px;
 
-    position: relative;
+  position: relative;
 }
 
 /* we style our font to our liking */
 
 nav a {
-    font-weight: bolder;
-    color: #64AEE6;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+  font-weight: bolder;
+  color: #64aee6;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
 /* here we add a mouse hover effect that changes the color of our text upon hover */
 
 nav a:hover {
-    color: #005799;
+  color: #005799;
 }
 
 /* we are creating a block of solid color above our nav buttons at a fixed position and allowing them to transition */
 
 nav a::before {
-    content:"";
-    display: block;
-    height: 5px;
-    width: 100%;
-    background: #005799;
-    position: absolute;
-    top: 0;
-    width: 0%;
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: #005799;
+  position: absolute;
+  top: 0;
+  width: 0%;
 
-    transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
 }
 
 /* saying when we hover over our nav items our block will display to 100% works with our transition */
 
 nav a:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 /* Clearing our above floats and adding our main page background image */
 
 #main {
-    overflow: auto;
-    clear: both;
-    background-image: url("../images/morocco.png");
-    min-height: 100%;
-    border-top: 8px solid #64AEE6;
-    display: flex;
-    flex-direction: column;
+  overflow: auto;
+  clear: both;
+  background-image: url("../images/morocco.png");
+  min-height: 100%;
+  border-top: 8px solid #64aee6;
+  display: flex;
+  flex-direction: column;
 }
 
 /* this is setting the box for our main content about me section */
 
 #container {
-    height: auto;
-    overflow: auto;
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    background: white;
-    border: 1px solid #005799;
+  height: auto;
+  overflow: auto;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: white;
+  border: 1px solid #005799;
 }
 
 /* setting our title header styling for about me */
 
 #aboutMe {
-    color: #005799;
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 95%;
-    padding: 10px;
-    border-bottom: 1px solid lightgray;
+  color: #005799;
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
 }
 
 /* this picture is for our index page */
 
 #picture {
-    margin: 30px 20px 5px 10px; 
-    height: 250px;
-    width: 220px;
-    float: left;
+  margin: 30px 20px 5px 10px;
+  height: 250px;
+  width: 220px;
+  float: left;
 }
 
 /* styling the text for the index page bio */
 
 #bio {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-    color: #005799;
-    padding: 5px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: #005799;
+  padding: 5px;
 }
 
 /* this form is for our contact page */
 
 #form {
-    padding-left: 1.5%;
+  padding-left: 1.5%;
 }
 
 .info {
-    color: rgb(104, 104, 255);
-    font-family: Arial, Helvetica, sans-serif;
+  color: rgb(104, 104, 255);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 input {
-    border: 1px solid #005799;
-    width: 98%;
+  border: 1px solid #005799;
+  width: 98%;
 }
 
 input:focus {
-    box-shadow: 0 0 10px rgba(0, 0, 200, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 200, 0.5);
 }
 
 textarea {
-    border: 1px solid #005799;
-    width: 49%;
-    height: 150px;
-    resize: both;
-    max-width: 98%;
-    max-height: 300px;
+  border: 1px solid #005799;
+  width: 49%;
+  height: 150px;
+  resize: both;
+  max-width: 98%;
+  max-height: 300px;
 }
 
 textarea:focus {
-    box-shadow: 0 0 10px rgba(0, 0, 200, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 200, 0.5);
 }
 
 #submit {
-    margin: 2% 1.5% 2% 1.5%;
-    padding: 1% 2% 1% 2%;
-    border-radius: 20px;
-    background: white;
-    color: #005799;
-    border: 2px solid #005799;
-    text-decoration: none;
-    font-size: 20px;
-    transition-duration: 0.4s;
+  margin: 2% 1.5% 2% 1.5%;
+  padding: 1% 2% 1% 2%;
+  border-radius: 20px;
+  background: white;
+  color: #005799;
+  border: 2px solid #005799;
+  text-decoration: none;
+  font-size: 20px;
+  transition-duration: 0.4s;
 }
 
 #submit:hover {
-    cursor: pointer;
-    background: #005799;
-    color: white;
+  cursor: pointer;
+  background: #005799;
+  color: white;
 }
 
 #reset {
-    margin: 2% 1.5% 2% 1.5%;
-    padding: 1% 2% 1% 2%;
-    border-radius: 20px;
-    background: white;
-    color: #005799;
-    border: 2px solid #005799;
-    text-decoration: none;
-    font-size: 20px;
-    transition-duration: 0.4s;
+  margin: 2% 1.5% 2% 1.5%;
+  padding: 1% 2% 1% 2%;
+  border-radius: 20px;
+  background: white;
+  color: #005799;
+  border: 2px solid #005799;
+  text-decoration: none;
+  font-size: 20px;
+  transition-duration: 0.4s;
 }
 
 #reset:hover {
-    cursor: pointer;
-    background: red;
-    color: white;
+  cursor: pointer;
+  background: red;
+  color: white;
 }
 
 /* styling our pictures for our portfolio page */
 
 #game {
-    padding: 20px;
-    height: 300px;
-    width: 300px;
-    float: left;
+  padding: 20px;
+  height: 300px;
+  width: 300px;
+  float: left;
 }
 
 #gameTag {
-    margin: 0;
-    padding: 0;
-    font-size: 50px;
-    font-weight: bold;
-    color: #005799;
-    background: lightgray;
-    opacity: .8;
-    width: 300px;
-    position: relative;
-    left: 20px;
-    bottom: 110px;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: bold;
+  color: #005799;
+  background: lightgray;
+  opacity: 0.8;
+  width: 300px;
+  position: relative;
+  left: 20px;
+  bottom: 110px;
 }
 
 #fanTag {
-    margin: 0;
-    padding: 0;
-    font-size: 50px;
-    font-weight: bold;
-    color: #005799;
-    background: lightgray;
-    opacity: .8;
-    width: 300px;
-    position: relative;
-    left: 360px;
-    bottom: 168px;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: bold;
+  color: #005799;
+  background: lightgray;
+  opacity: 0.8;
+  width: 300px;
+  position: relative;
+  left: 360px;
+  bottom: 168px;
 }
 
 #fanpage {
-    padding: 20px;
-    height: 300px;
-    width: 300px;
+  padding: 20px;
+  height: 300px;
+  width: 300px;
 }
 
 #more {
-    text-align: center;
-    font-size: 75px;
-    color: #005799;
-    font-weight: bold;
+  text-align: center;
+  font-size: 75px;
+  color: #005799;
+  font-weight: bold;
 }
 
 /* setting our footer styling as well as changing the properties so it stays at the bottom of the page */
 
 #footer {
-    border-top: 8px solid #64AEE6;
-    background: #005799;
-    padding-bottom: 5px;
-    margin-top: auto;
-    clear: both;
+  border-top: 8px solid #64aee6;
+  background: #005799;
+  padding-bottom: 5px;
+  margin-top: auto;
+  clear: both;
 }
 
 /* throwing on a copyright logo to our footer */
 
 #copyright {
-    text-align: center;
-    color: white;
-    padding: 10px;
+  text-align: center;
+  color: white;
+  padding: 10px;
 }
 
-@media screen and (max-width: 980px){}
-
-
-@media screen and (max-width: 768px){
-    header {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
+.crop-box {
+  float: left;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  padding-right: 16px;
 }
 
+.crop-box #picture {
+  width: 100%;
+  height: auto;
+}
 
-@media screen and (max-width: 640px){
-    #headsize {
-        position: static;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        display: flex;
-        flex-direction: column;
-    }
-    #name {
-        width: 100%;
-    }
-    nav {
-        clear: both;
-    }
-    #main {
-        width: 100%;
-    }
-    #container {
-        width: 100%;
-        width: calc(100% - 16px);
-        margin: 0px 8px 0px 8px;
-        box-sizing: border-box;
-    }
+@media screen and (max-width: 980px) {
+  #main {
+    width: 100%;
+  }
+  #container {
+    width: 100%;
+    width: calc(100% - 16px);
+    margin: 0px 8px 0px 8px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #name {
+    width: 320px;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  nav {
+    margin-right: 8px;
+  }
+
+  nav li {
+    padding-top: 0px;
+  }
+
+  #main {
+    width: 100%;
+  }
+  #container {
+    width: 100%;
+    width: calc(100% - 16px);
+    margin: 0px 8px 0px 8px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  #headsize {
+    position: static;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  #name {
+    width: 100%;
+  }
+  nav {
+    clear: both;
+  }
+  #main {
+    width: 100%;
+  }
+  #container {
+    width: 100%;
+    width: calc(100% - 16px);
+    margin: 0px 8px 0px 8px;
+    box-sizing: border-box;
+  }
+
+  .crop-box {
+    width: 100%;
+    position: relative;
+  }
+
+  .crop-box #picture {
+    position: absolute;
+    top: -100px;
+    padding: 0px;
+    overflow: hidden;
+  }
 }
